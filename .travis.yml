@@ -17,4 +17,4 @@ install:
   - bash ./prepare_magento.sh
 
 script:
-  - ./run_tests.sh;
+  - bash ./run_tests.sh;
