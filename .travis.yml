@@ -14,7 +14,7 @@ cache:
 install:
   - composer --version
   - composer install -n
-  - bash ./tests/prepare_magento.sh
+  - bash ./prepare_magento.sh
 
 script:
   - ./run_tests.sh;
