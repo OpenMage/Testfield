@@ -17,6 +17,7 @@ $composerJson = <<<JSON
         "avstudnitz/fast-simple-import":"*"
     },
     "extra":{
+        "magento-deploystrategy": "copy",
         "magento-root-dir": "./"
     }
 }
