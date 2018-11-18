@@ -81,11 +81,11 @@ $getNiceFileSize = function($bytes, $binaryPrefix=true) {
     }
 };
 
-echo sprintf("Memory usage: %s / %s ",
+echo sprintf("Memory usage: %s / %s \n",
     $getNiceFileSize(memory_get_usage()),
     $getNiceFileSize(memory_get_peak_usage())
 );
-echo sprintf("real Memory usage: %s / %s ",
+echo sprintf("real Memory usage: %s / %s \n",
     $getNiceFileSize(memory_get_usage(true)),
     $getNiceFileSize(memory_get_peak_usage(true))
 );
