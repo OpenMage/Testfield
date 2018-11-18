@@ -10,7 +10,6 @@ services:
 cache:
   directories:
   - $HOME/.composer/cache
-  - ./magento
 
 install:
   - composer --version
