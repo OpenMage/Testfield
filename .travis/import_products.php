@@ -31,11 +31,11 @@ $data = array();
 for ($i = 1; $i <= 1000; $i++) {
     $randomString = getUniqueCode(20);
     $data[] = array(
-        'sku' => $i,
+        'sku' => 'imported-'.$i,
         '_type' => 'simple',
         '_attribute_set' => 'Default',
         '_product_websites' => 'base',
-        '_category' => array(1, 3),
+        '_category' => 3,
         'name' => $randomString,
         'price' => 0.99,
         'special_price' => 0.90,
