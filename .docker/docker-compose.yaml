@@ -1,0 +1,13 @@
+version: "3.0"
+
+services:
+
+  mysql-magentodb:
+    image: mysql:5.6
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: magentodb
+      MYSQL_PASSWORD: magentodb
+      MYSQL_ROOT_PASSWORD: magentodb
+      MYSQL_USER: magentodb
