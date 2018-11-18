@@ -39,7 +39,7 @@ $data[] = array(
     'default_sort_by' => 'position',
 );
 $data[] = array(
-    '_store' => 'storename',
+    '_store' => 'default',
     'name' => 'Storeview name',
     'description' => 'Never specify a name in admin store level, the name is extracted out of the _category path'
 );
