@@ -1,6 +1,6 @@
 <?php
 
-passthru('git clone --depth 1 https://github.com/OpenMage/magento-lts.git magento');
+passthru('git clone --depth 1 '.getenv('MAGENTO_REPOSITORY').' -b '.getenv('MAGENTO_REPOSITORY_BRANCH').' magento');
 
 passthru('./vendor/bin/n98-magerun install --noDownload \
     --dbHost="localhost" --dbUser="travis" \

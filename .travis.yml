@@ -4,6 +4,14 @@ php:
 #  - 7.1
   - 7.2
 #  - 5.6
+
+env:
+  global:
+  - MAGENTO_REPOSITORY="https://github.com/OpenMage/magento-lts.git"
+  - MAGENTO_REPOSITORY_BRANCH="1.9.3.x"
+  matrix:
+  - MAGENTO_REPOSITORY="https://github.com/OpenMage/magento-mirror.git" MAGENTO_REPOSITORY_BRANCH="magento-1.9"
+
 services:
   - mysql
 
@@ -17,6 +25,7 @@ install:
   - bash ./prepare_magento.sh
   - php .travis/import_categories.php
   - php .travis/import_products.php
+  - ./vendor/bin/n98-magerun --root-dir=magento/ index:reindex:all
 
 script:
   - ./vendor/bin/phpunit
