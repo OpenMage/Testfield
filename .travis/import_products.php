@@ -28,7 +28,11 @@ echo 'Elapsed time: ' . round(microtime(true) - $time, 2) . 's' . "\n";
 */
 // Create/Update products
 $data = array();
-for ($i = 1; $i <= 30000; $i++) {
+$numberOfProducts = getenv('MAGENTO_GENERATED_PRODUCTS');
+if (!$numberOfProducts) {
+    $numberOfProducts = 1000;
+}
+for ($i = 1; $i <= $numberOfProducts; $i++) {
     $randomString = getUniqueCode(20);
     $data[] = array(
         'sku' => 'imported-'.$i,

@@ -12,6 +12,7 @@ matrix:
     env:
     - MAGENTO_REPOSITORY="https://github.com/OpenMage/magento-lts.git"
     - MAGENTO_REPOSITORY_BRANCH="1.9.3.x"
+    - MAGENTO_GENERATED_PRODUCTS=3000
   - name: "Openmage LTS; PHP 7.1"
     php: "7.1"
     env:
