@@ -28,7 +28,7 @@ echo 'Elapsed time: ' . round(microtime(true) - $time, 2) . 's' . "\n";
 */
 // Create/Update products
 $data = array();
-for ($i = 1; $i <= 1000; $i++) {
+for ($i = 1; $i <= 30000; $i++) {
     $randomString = getUniqueCode(20);
     $data[] = array(
         'sku' => 'imported-'.$i,
