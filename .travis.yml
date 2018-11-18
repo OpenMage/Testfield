@@ -17,4 +17,5 @@ install:
   - bash ./prepare_magento.sh
 
 script:
+  - ./vendor/bin/phpunit
   - bash ./run_tests.sh;
