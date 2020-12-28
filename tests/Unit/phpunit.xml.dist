@@ -13,6 +13,7 @@
     <testsuites>
         <testsuite name="Unit">
             <directory>./Base</directory>
+            <directory>./Regression</directory>
         </testsuite>
     </testsuites>
 
