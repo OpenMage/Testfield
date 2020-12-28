@@ -18,6 +18,8 @@ class Ticket1213Test extends TestCase
     public function testDefaultState()
     {
         $object = new \Mage_Eav_Model_Entity_Increment_Numeric();
+        var_dump(error_reporting());
+
 
         $this->assertEquals(null, $object->getPrefix());
         $this->assertEquals(null, $object->getLastId());
