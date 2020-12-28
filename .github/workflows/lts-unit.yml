@@ -30,4 +30,4 @@ jobs:
         run: composer install --prefer-dist --no-progress --ignore-platform-reqs
 
       - name: run phpUnit
-        run: run_unit_tests.sh
+        run: bash ./run_unit_tests.sh
