@@ -8,14 +8,11 @@
          convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false"
-         bootstrap="tests/bootstrap.php"
+         bootstrap="./bootstrap.php"
 >
     <testsuites>
         <testsuite name="Unit">
-            <directory>./tests/Unit</directory>
-        </testsuite>
-        <testsuite name="Fullstack">
-            <directory>./tests/MagentoHackathon/Composer/FullStack</directory>
+            <directory>./Base</directory>
         </testsuite>
     </testsuites>
 

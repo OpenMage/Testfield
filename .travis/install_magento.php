@@ -1,13 +1,13 @@
 <?php
 
-passthru('git clone --depth 1 '.getenv('MAGENTO_REPOSITORY').' -b '.getenv('MAGENTO_REPOSITORY_BRANCH').' magento');
+passthru('git clone --depth 1 '.getenv('MAGENTO_REPOSITORY').' -b '.getenv('MAGENTO_REPOSITORY_BRANCH').' openmage');
 
 passthru('./vendor/bin/n98-magerun install --noDownload \
     --dbHost="localhost" --dbUser="travis" \
     --dbPass="" --dbName="magentodb" --installSampleData=yes \
     --useDefaultConfigParams=yes \
     --magentoVersionByName="magento-mirror-1.9.3.10" \
-    --installationFolder="magento" --baseUrl="http://127.0.0.5:8080/"
+    --installationFolder="openmage" --baseUrl="http://127.0.0.5:8080/"
 ');
 
 $composerJson = <<<JSON
@@ -23,7 +23,7 @@ $composerJson = <<<JSON
 }
 JSON;
 
-chdir(__DIR__ . '/../magento');
+chdir(__DIR__ . '/../openmage');
 
 file_put_contents('composer.json', $composerJson);
 passthru('composer install');

@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  unit-tests:
 
     runs-on: ubuntu-latest
 
@@ -16,7 +16,7 @@ jobs:
         run: php --version && composer --version
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest --ignore-platform-reqs
+        run: composer install --prefer-dist --no-progress --ignore-platform-reqs
 
       - name: Checkout OpenMage repo
         uses: actions/checkout@v2
@@ -27,4 +27,7 @@ jobs:
 
       - name: Install OpenMage dependencies
         working-directory: ./openmage
-        run: composer install --prefer-dist --no-progress --no-suggest --ignore-platform-reqs
+        run: composer install --prefer-dist --no-progress --ignore-platform-reqs
+
+      - name: run phpUnit
+        run: run_unit_tests.sh
