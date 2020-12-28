@@ -1,0 +1,30 @@
+name: OpenMage LTS - Unit Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: php & Composer version
+        run: php --version && composer --version
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest --ignore-platform-reqs
+
+      - name: Checkout OpenMage repo
+        uses: actions/checkout@v2
+        with:
+          repository: OpenMage/magento-lts
+          path: openmage
+          ref: 1.9.4.x
+
+      - name: Install OpenMage dependencies
+        working-directory: ./openmage
+        run: composer install --prefer-dist --no-progress --no-suggest --ignore-platform-reqs
