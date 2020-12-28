@@ -23,7 +23,7 @@ jobs:
         with:
           repository: OpenMage/magento-lts
           path: openmage
-          ref: 1.9.4.x
+          ref: v19.4.8
 
       - name: Install OpenMage dependencies
         working-directory: ./openmage
