@@ -31,3 +31,9 @@ jobs:
 
       - name: run phpUnit
         run: bash ./run_unit_tests.sh
+
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1.6
+        if: always()
+        with:
+          files: output/*.xml
