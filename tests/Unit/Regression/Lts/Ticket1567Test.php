@@ -30,7 +30,7 @@ class Ticket1567Test extends TestCase
 
     public function testMagicSetWithMiddleDoubleUpperCase()
     {
-        if (Mage::getOpenMageVersionInfo()['major'] === 19) {
+        if (\Mage::getOpenMageVersionInfo()['major'] === 19) {
             $this->markTestSkipped("only solved from 20.x on");
         }
         $object = new \Varien_Object();
@@ -43,7 +43,7 @@ class Ticket1567Test extends TestCase
 
     public function testSetDataWithMiddleDoubleUpperCase()
     {
-        if (Mage::getOpenMageVersionInfo()['major'] === 19) {
+        if (\Mage::getOpenMageVersionInfo()['major'] === 19) {
             $this->markTestSkipped("only solved from 20.x on");
         }
         $object = new \Varien_Object();
