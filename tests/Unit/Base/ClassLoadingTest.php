@@ -13,4 +13,9 @@ class ClassLoadingTest extends TestCase
         $this->assertTrue(class_exists('Mage'));
         $this->assertTrue(class_exists('Mage_Eav_Model_Entity_Increment_Numeric'));
     }
+    
+    public function testClassDoesNotExists()
+    {
+        $this->assertFalse(class_exists('Mage_Non_Existent'));
+    }
 }
